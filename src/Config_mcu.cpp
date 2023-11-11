@@ -143,6 +143,9 @@ void Config_mcu()
   // SREG - Status Register
   SREG = 0b10000000;
 
+  // TBBR - TWI Bit Rate Register
+  TWBR = 0b00000000;
+  
   // TWSR - TWI Status Register
   TWSR = 0b11111000;
 
