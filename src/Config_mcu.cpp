@@ -134,11 +134,14 @@ void Config_mcu()
     OCR1A = T1_comp;
     
     //Habilita Interrupção do Timer1
-   // TIMSK1 = (1 << OCIE1A);
+    TIMSK1 = (1 << OCIE1A);
 
   // ======================================================================================================
   // --- Interrupção ---
   // Vetor de Interrupção Comunicação I2C
+
+  // SREG - Status Register
+  SREG = 0b10000000;
 
   // TWSR - TWI Status Register
   TWSR = 0b11111000;
